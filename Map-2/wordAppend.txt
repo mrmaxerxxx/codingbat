@@ -1,0 +1,15 @@
+public String wordAppend(String[] strings) {
+        HashMap<String, Integer> map=new HashMap<String, Integer>();
+        String pomoc="";
+        for(String pom : strings){
+            if(!map.containsKey(pom)){
+                map.put(pom, 1);
+            }else{
+                map.put(pom, map.get(pom)+1);
+                if(map.get(pom)%2==0){
+                    pomoc=pomoc+pom;
+                }
+            }
+        }
+        return pomoc;
+    }

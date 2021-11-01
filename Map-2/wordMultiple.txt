@@ -1,0 +1,18 @@
+public Map<String, Boolean> wordMultiple(String[] strings) {
+        HashMap<String, Boolean> map = new HashMap<String, Boolean>();
+        int k;
+        for(int i=0;i<strings.length;i++){
+            k=0;
+            for(int j=0;j<strings.length;j++){
+                if(strings[i]==strings[j]){
+                    k=k+1;
+                }
+            }
+            if(k<2){
+                map.put(strings[i], false);
+            }else{
+                map.put(strings[i], true);
+            }
+        }
+        return map;
+    }
